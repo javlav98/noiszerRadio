@@ -2,26 +2,13 @@ footer {
     border-top: 0.5px solid black;
 }
 
-.iconContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    list-style: none;
-    margin-top: 20px;
-    font-size: 30px;
-}
-
-.iconSm {
-    margin: 0 10px;
-}
-
 .ulFooter {
     display: flex;
     justify-content: center;
     align-items: center;
     list-style: none;
     margin-top: 10px;
-    font-size: 15px;
+    font-size: 10px;
 }
 
 .footer-item {
@@ -31,7 +18,7 @@ footer {
 .footer-item a {
     text-decoration: none;
     color: black;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'CRENZO';
 }
 
 .footer-item a:hover {
@@ -39,11 +26,42 @@ footer {
 }
 
 .Copyrights {
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 15px;
+    font-family: 'CRENZO';
+    font-size: 10px;
     padding: 0;
     text-align: center;
     margin-top: 10px;
-    font-size: small;
     margin-bottom: 10px;
+}
+
+@media screen and (min-width: 0px) and (max-width: 425px){
+    .ulFooter {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        list-style: none;
+        margin-top: 10px;
+        font-size: 6.5px;
+    }
+
+    .Copyrights {
+        font-family: 'CRENZO';
+        font-size: 7.5px;
+        padding: 0;
+        text-align: center;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+        
+    
+}
+
+
+
+@media screen and (max-width: 470px) {
+
+    .footer-item {
+        margin: 10px 5px;
+    }
+    
 }
