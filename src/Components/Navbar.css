@@ -1,124 +1,119 @@
+/* Common styles for wide and mobile screens */
 .navbar {
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-bottom: 1px solid #000000;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #000000;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between; /* Change to space-between */
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 24px;
+}
+
+.navbar-logo {
+  color: #000000;
+  font-size: 24px;
+  text-decoration: none;
+  font-family: 'CRENZO'
+}
+
+.menu-icon {
+  display: none;
+  color: #000000;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.nav-menu,.toolnav {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+
+/* Styles for wide screens */
+.nav-menu {
+  justify-content: space-between; /* Distribute space between items */
+  flex-grow: 0.5; 
+}
+
+.nav-item a {
+  text-decoration: none; /* Remove text decoration from middle items */
+  color: #000000;
+  font-family: 'CRENZO';
+  font-size: 13px;
+}
+
+.nav-item a:hover {
+  color: #6c6c6c;
+  font-family: 'CRENZO';
+  font-size: 13px;
+}
+
+
+
+
+/* Media Query for the mobile menu */
+@media screen and (max-width: 500px) {
+  .menu-icon {
+    display: block;
+    margin-right: -5px; /* Adjust the margin as needed */
   }
-  
+
   .navbar-container {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     width: 100%;
     max-width: 1200px;
     padding: 0 24px;
   }
-  
-  .navbar-logo {
-    color: #000000;
-    font-size: 24px;
-    text-decoration: none;
-    font-family: 'Courier New', Courier, monospace;
-  }
-  
-  .menu-icon {
-    display: none;
-    color: #000000;
-    cursor: pointer;
-    font-size: 18px;
-    margin-top: 10px;
-  }
-  
+
   .nav-menu {
     display: flex;
-    align-items: center;
-    list-style: none;
-
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the left */
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 50px;
+    left: -100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    background: #ffffff;
+    padding-left: 24px;
+    padding-top: 30px;
   }
-  
+
+  .nav-menu.active {
+    left: 0;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .navbar-logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(60%, 50%);
+    margin-right: 0;
+  }
+
+  .nav-item {
+    margin-bottom: 70px;
+  }
+
   .nav-item a {
-    margin-right: 16px;
     font-family: 'Courier New', Courier, monospace;
     font-size: 18px;
     text-decoration: none;
     color: #000000;
-
+    font-family: 'CRENZO';
   }
-
-  .nav-item a:hover {
-    color: #787878;
-    transition: all 0.3s ease;
-  }
-  
-  .nav-link.active {
-    font-weight: bold;
-  }
-
-  .toolnav {
-    display: flex;
-    align-items: center;
-    list-style: none;
-  }
-  
-  /* Media Query for the mobile menu */
-  @media screen and (max-width: 500px) {
-    .menu-icon {
-      display: block;
-      margin-right: -5px; /* Adjust the margin as needed */
-    }
-
-    .navbar-container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 100%;
-        max-width: 1200px;
-        padding: 0 24px;
-      }
-  
-    .nav-menu {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      width: 100%;
-      height: 100vh;
-      position: absolute;
-      top: 50px;
-      left: -100%;
-      opacity: 0;
-      visibility: hidden;
-      transition: all 0.3s ease;
-      background: #ffffff;
-      padding-left: 24px;
-      padding-top: 50px ;
-
-    }
-  
-    .nav-menu.active {
-      left: 0;
-      opacity: 1;
-      visibility: visible;
-    }
-
-    .navbar-logo {
-        position: absolute;
-        top: 0;
-        left: 0;
-        transform: translate(60%, 50%);
-        margin-right: 0;
-    }
-    .nav-item {
-      margin-bottom: 50px;
-    }
-
-    .nav-item a {
-      margin-right: 16px;
-      font-family: 'Courier New', Courier, monospace;
-      font-size: 18px;
-      text-decoration: none;
-      color: #000000;
-  
-    }
-  }
-  
+}

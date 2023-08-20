@@ -46,13 +46,24 @@ const Navbar = () => {
             </li>
             <li className="nav-item">
               <NavLink
-                to="/Projects"
+                to="/schedule"
                 activeClassName="active"
                 onClick={toggleMenu}
               >
-                Projects
+                Schedule
+              </NavLink>
+
+            </li>
+            <li className="nav-item">
+              <NavLink
+                to="/djs"
+                activeClassName="active"
+                onClick={toggleMenu}
+              >
+                Djs
               </NavLink>
             </li>
+
             <li className="nav-item">
               <NavLink
                 to="/contact"
@@ -62,6 +73,19 @@ const Navbar = () => {
                 Contact
               </NavLink>
             </li>
+
+
+            <li className="nav-item">
+              <NavLink
+                to="/donate"
+                activeClassName="active"
+                onClick={toggleMenu}
+              >
+                Donate
+              </NavLink>
+
+            </li>
+
           </ul>
           <div className="toolnav">
           <PlayPauseButton streamUrl={streamUrl} />

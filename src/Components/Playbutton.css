@@ -4,6 +4,10 @@ button {
     cursor: pointer;
     height: 32px;
     width: 32px;
-    padding: 8px;
-    margin-right: 10px;
+    font-size: 15px;
+    margin-left: 10px;
+}
+
+button:hover {
+    color: #6c6c6c;
 }
