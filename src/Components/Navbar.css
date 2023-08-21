@@ -1,6 +1,6 @@
 /* Common styles for wide and mobile screens */
 .navbar {
-  height: 50px;
+  height: 60px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -18,16 +18,18 @@
 
 .navbar-logo {
   color: #000000;
-  font-size: 24px;
+  font-size: 30px;
   text-decoration: none;
-  font-family: 'CRENZO'
+  font-family: 'ElectroMan 2';
+  text-align: center;
 }
 
-.menu-icon {
+.menu-icon  {
   display: none;
   color: #000000;
   cursor: pointer;
-  font-size: 17px;
+  font-size: 15px;
+  margin-top: 5px;
 }
 
 .nav-menu,.toolnav {
@@ -46,8 +48,9 @@
 .nav-item a {
   text-decoration: none; /* Remove text decoration from middle items */
   color: #000000;
-  font-family: 'CRENZO';
-  font-size: 13px;
+  font-family: 'gruppo';
+  font-size: 20px;
+  font-weight: lighter;
 }
 
 .nav-item a:hover {
@@ -96,7 +99,7 @@
     width: 100%;
     height: 100vh;
     position: absolute;
-    top: 50px;
+    top: 40px;
     left: -100%;
     opacity: 0;
     visibility: hidden;
@@ -116,7 +119,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    transform: translate(40%, 50%);
+    transform: translate(50%, 20%);
     margin-right: 0px;
   }
 

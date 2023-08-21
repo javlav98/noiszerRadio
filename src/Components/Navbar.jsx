@@ -22,7 +22,7 @@ const Navbar = () => {
             {isOpen ? <FaTimes /> : <FaBars />}
           </div>
           <Link to="/" className="navbar-logo">
-            Noiszer
+            noiszer
           </Link>
           <ul className={isOpen ? 'nav-menu active' : 'nav-menu'}>
             <li className="nav-item">
@@ -32,7 +32,7 @@ const Navbar = () => {
                 activeClassName="active"
                 onClick={toggleMenu}
               >
-                Home
+                home
               </NavLink>
             </li>
             <li className="nav-item">
@@ -41,7 +41,7 @@ const Navbar = () => {
                 activeClassName="active"
                 onClick={toggleMenu}
               >
-                About
+                about
               </NavLink>
             </li>
             <li className="nav-item">
@@ -50,7 +50,7 @@ const Navbar = () => {
                 activeClassName="active"
                 onClick={toggleMenu}
               >
-                Schedule
+                schedule
               </NavLink>
 
             </li>
@@ -60,7 +60,7 @@ const Navbar = () => {
                 activeClassName="active"
                 onClick={toggleMenu}
               >
-                Djs
+                dj's
               </NavLink>
             </li>
 
@@ -70,7 +70,7 @@ const Navbar = () => {
                 activeClassName="active"
                 onClick={toggleMenu}
               >
-                Contact
+                contact
               </NavLink>
             </li>
 
@@ -81,7 +81,7 @@ const Navbar = () => {
                 activeClassName="active"
                 onClick={toggleMenu}
               >
-                Donate
+                donate
               </NavLink>
 
             </li>
