@@ -87,11 +87,12 @@ const Navbar = () => {
             </li>
 
           </ul>
-          <div className="toolnav">
+          
+          {/*<div className="toolnav">
           <PlayPauseButton streamUrl={streamUrl} />
           <SearchBar />
           <MoreIconWithDropdown />
-          </div>
+          </div> */}
         </div>
       </nav>
     </div>
