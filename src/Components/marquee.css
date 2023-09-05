@@ -1,0 +1,28 @@
+.marquee {
+    white-space: nowrap;
+    overflow: hidden;
+    position: relative;
+    border-bottom: 1px solid black;
+  }
+  
+  .marquee p {
+    margin: 0;
+    font-family: CRENZO;
+    animation: marquee 100s linear infinite;
+    transform-origin: top left;
+    animation-delay: -5s; /* Adjust this value to start the animation immediately */
+  }
+  
+  @keyframes marquee {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-1200%); /* Adjust this value to ensure it goes off-screen completely */
+    }
+  }
+  
+  .marquee:hover p {
+    animation-play-state: paused;
+  }
+  

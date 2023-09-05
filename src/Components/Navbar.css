@@ -2,126 +2,69 @@
 .navbar {
   height: 50px;
   display: flex;
-  justify-content: center;
+  justify-content: space-between; /* Keep space-between for wide screens */
   align-items: center;
-  border-bottom: 1px solid #000000;
+  background-color: #fff;
+  border-bottom: 1px solid #000;
 }
 
 .navbar-container {
-  display: flex;/* Change to space-between */
+  display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
   margin-left: 30px;
   margin-right: 30px;
-
 }
 
 .navbar-logo {
-  color: #000000;
+  color: #000;
   font-size: 30px;
   text-decoration: none;
-  font-family: 'CRENZO';
-  text-align: center;
-  margin-top: 7px;
-}
-
-.menu-icon  {
-  display: none;
-  color: #000000;
-  cursor: pointer;
-  font-size: 20px;
-  margin-top: 5px;
-}
-
-.nav-menu,.toolnav {
+  font-family: 'CRENZO', sans-serif;
   display: flex;
   align-items: center;
-  list-style: none;
-
 }
 
+.menu-icon {
+  color: #000;
+  cursor: pointer;
+  font-size: 20px;
+}
 
+.nav-menu {
+  position: absolute;
+  top: 71px;
+  left: -100%; /* Initially hide the menu by moving it off-screen */
+  background-color: #fff;
+  z-index: 1;
+  width: 100%; /* Take up the full width of the screen */
+  height: 100%; /* Take up the full height of the screen */
+  transition: left 0.3s ease; /* Add a transition for smooth sliding animation */
+  overflow-y: auto; /* Enable scrolling for the menu */
+  padding-left: 30px;
+  padding-top: 20px;
+}
+
+.nav-menu.active {
+  left: 0; /* Slide in from the right when active */
+}
+
+.nav-item {
+  margin-bottom: 70px; /* Adjust spacing between menu items */
+  list-style: none;
+}
 
 .nav-item a {
-  text-decoration: none; /* Remove text decoration from middle items */
-  color: #000000;
-  font-family: 'CRENZO';
-  font-size: 12px;
-  font-weight: lighter;
-  margin-left: 10px
+  text-decoration: none;
+  color: #000;
+  font-family: 'CRENZO', sans-serif;
+  font-size: 20px; /* Increase font size */
+  font-weight: bold; /* Add bold font weight */
+
 }
 
 .nav-item a:hover {
   color: #6c6c6c;
-  font-family: 'CRENZO';
-  font-size: 13px;
-}
-
-
-
-
-/* Media Query for the mobile menu */
-@media screen and (min-width:0px) and (max-width: 450px) {
-
-  .navbar-logo {
-    color: #000000;
-    font-size: 25px;
-    text-decoration: none;
-    font-family: 'CRENZO';
-  }
-
-  
-}
-
-@media screen and (max-width: 900px) {
-  .menu-icon {
-    display: block;
-    margin-right: -5px; /* Adjust the margin as needed */
-  }
-
-  .navbar-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    margin-left: 15px;
-    margin-right: 15px;
-  }
-
-  .nav-menu {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start; /* Align items to the left */
-    width: 100%;
-    height: 100vh;
-    position: absolute;
-    top: 50px;
-    left: -100%;
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.3s ease;
-    background: #ffffff;
-    padding-left: 24px;
-    padding-top: 30px;
-  }
-
-  .nav-menu.active {
-    left: 0;
-    opacity: 1;
-    visibility: visible;
-  }
-
-  .nav-item {
-    margin-bottom: 70px;
-  }
-
-  .nav-item a {
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 18px;
-    text-decoration: none;
-    color: #000000;
-    font-family: 'CRENZO';
-    margin-left: 0px;
-  }
+  font-size: 22px; /* Increase font size on hover */
 }

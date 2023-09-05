@@ -7,7 +7,7 @@ function Background() {
       backgroundRepeat: 'no-repeat',
       backgroundSize: 'cover',
       backgroundPosition: 'center',
-      height: '100vh',
+      height: '89.5vh',
       width: '100vw',
       color: 'white',
       border: '0.1px solid black',
