@@ -1,0 +1,26 @@
+/* Carousel with Previews container */
+.carousel-with-previews {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.carousel-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel-container img {
+ height: 550px;
+
+}
+
+.previews-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 30%;
+  overflow: hidden;
+  position: relative;
+}
