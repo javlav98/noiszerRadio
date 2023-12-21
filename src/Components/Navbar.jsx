@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
-import SearchBar from './Searchbar'; // Import your SearchBar component
 import './Navbar.css';
 
 const Navbar = () => {
@@ -23,11 +22,9 @@ const Navbar = () => {
       <nav className="navbar">
         <div className="navbar-container">
           <Link to="/" className="navbar-logo">
-            <h1>noiszer</h1>
+            <h1>noiser</h1>
           </Link>
 
-          <SearchBar /> {/* Add your SearchBar component here */}
-          
           <div className="menu-icon" onClick={toggleMenu}>
             {menuActive ? <AiOutlineClose /> : <AiOutlineMenu />}
           </div>
